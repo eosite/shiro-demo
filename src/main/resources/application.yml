@@ -1,0 +1,23 @@
+server:
+  port: 16677
+  undertow:
+    accesslog:
+      enabled: true
+      pattern: combined
+    buffer-size: 1024
+    direct-buffers: true
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 5s
+
+logging.level:
+  org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
